@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Navbar from './components/navbar';
+import NavBar from './components/navbar';
 
 const App = () => {
   return (
-    <Navbar/>
+    <NavBar/>
   );
 };
 

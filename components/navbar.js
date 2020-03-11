@@ -5,25 +5,29 @@ import NavigationBar from 'react-native-navbar';
 const Navbar = () => {
     return (
     <View style={styles.container}>
-        <NavigationBar title={titleConfig} rightButton={rightButtonConfig} />
+        <NavigationBar style={styles.navbarstyl} title={titleConfig} rightButton={rightButtonConfig} />
     </View>
     )
 }
 const styles = {
     container: {
       flex: 1,
-      backgroundColor: '#ff9900',
-    },
+      backgroundColor: '#576574',
+    }
   };
   
   const rightButtonConfig = {
     title: 'Sign-In',
+    tintColor: '#a29bfe',
     handler: () => alert('hello!'),
   };
   
   const titleConfig = {
     title: 'Hello Cars',
+    tintColor: '#c8d6e5',
+    ellipsizeMode: 'tail'
   };
+
 
 
   export default Navbar;
