@@ -12,7 +12,7 @@ export default class LoginForm extends Component {
 
     render(){
         return (
-            <View style={Styles.inputView}>
+            <View style={Styles.container}>
                 <TextInput style = {Styles.inputText} placeholder="Email" 
                     onChangeText={text => this.setState({email: text})}>
                 </TextInput>
@@ -20,10 +20,10 @@ export default class LoginForm extends Component {
                     onChangeText={text => this.setState({password: text})}>
                 </TextInput>
                 <TouchableOpacity>
-                    <Text style={styles.forgot}>Forgot Password?</Text>
+                    <Text style={Styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.loginBtn}>
-                    <Text style={styles.loginText}>LOGIN</Text>
+                <TouchableOpacity style={Styles.loginBtn}>
+                    <Text style={Styles.loginText}>LOGIN</Text>
                 </TouchableOpacity>
             </View>
         );
