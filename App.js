@@ -1,10 +1,10 @@
-import React from 'react';
-import Loginform from './components/loginform';
+import React, { Component } from 'react';
+import  RoutingApp  from './routing/routingApp';
 
-const App = () => {
-  return (
-    <Loginform/>
-  );
-};
-
-export default App;
+export default class App extends Component {
+  render() {
+    return(
+      <RoutingApp/>
+    )
+  }
+}
