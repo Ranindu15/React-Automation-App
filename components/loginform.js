@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, Button, TouchableOpacity, TextInput } from 'react-native';
 
 export default class LoginForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: "",
-            password: ""
-        }
-    }
 
-    render(){
+  constructor(props) {
+    super(props);
+    this.state = {
+        email: "",
+        password: ""
+    }
+  }
+  render (){
         return (
             <View style={Styles.container}>
                 <TextInput style = {Styles.inputText} placeholder="Email" 
@@ -27,7 +27,7 @@ export default class LoginForm extends Component {
                 </TouchableOpacity>
             </View>
         );
-    }
+  }
 } 
 
 const Styles = {
