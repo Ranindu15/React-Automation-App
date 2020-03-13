@@ -1,9 +1,9 @@
 import React from 'react';
-import NavBar from './components/navbar';
+import Loginform from './components/loginform';
 
 const App = () => {
   return (
-    <NavBar/>
+    <Loginform/>
   );
 };
 
