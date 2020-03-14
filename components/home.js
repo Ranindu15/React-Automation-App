@@ -1,8 +1,11 @@
 import  React, { Component }  from 'react';
 import { SliderBox } from 'react-native-image-slider-box';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-export default class Home extends Component{
+export default class Home extends Component {
+  btnfunc = () =>{
+    this.props.navigation.navigate('cardpage');
+  }
   constructor(props) {     
     super(props);     
     this.state = {       
@@ -13,13 +16,13 @@ export default class Home extends Component{
     require('../assests/vega.png'),
     ]     
     };
-  }
+}
   render() {
     return (
       <View style={Styles.container}>
         <SliderBox 
           images={this.state.images}   
-          sliderBoxHeight={400}   
+          sliderBoxHeight={300}   
           onCurrentImagePressed={
             index => console.warn(`image ${index} pressed`)
           }  
@@ -29,6 +32,9 @@ export default class Home extends Component{
           autoplay   
           circleLoop >
         </SliderBox>
+
+        <Button title="Press" onPress={this.btnfunc}/>
+
         <Text>HEllo</Text>
       </View>
 

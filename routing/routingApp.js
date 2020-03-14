@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import  Home  from '../components/home';
 import  LoginForm  from '../components/loginform';
+import Model from '../components/model';
+import Card from '../components/card';
 
 const Homestack = createStackNavigator();
 
@@ -26,6 +28,8 @@ export default function RotingApp() {
               title:"Transformers",
               headerTitleAlign:'center',
             }}/>
+            <Homestack.Screen name="modelpage" component={Model} />
+            <Homestack.Screen name="cardpage" component={Card} />
           </Homestack.Navigator>
         </NavigationContainer>
     )
