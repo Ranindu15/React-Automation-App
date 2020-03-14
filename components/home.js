@@ -1,47 +1,45 @@
 import  React, { Component }  from 'react';
-import { Slideshow } from 'react-native-slideshow';
+import { SliderBox } from 'react-native-image-slider-box';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default class Home extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          position: 1,
-          interval: null,
-          dataSource: [
-            {
-              title: 'Title 1',
-              caption: 'Caption 1',
-              url: 'http://placeimg.com/640/480/any',
-            }, {
-              title: 'Title 2',
-              caption: 'Caption 2',
-              url: 'http://placeimg.com/640/480/any',
-            },
-          ],
-        }
-      }
+  constructor(props) {     
+    super(props);     
+    this.state = {       
+    images: [         
+    require('../assests/audi.jpg'),        
+    require('../assests/benz.jpg'),
+    require('../assests/bmw1.png'),
+    require('../assests/vega.png'),
+    ]     
+    };
+  }
+  render() {
+    return (
+      <View style={Styles.container}>
+        <SliderBox 
+          images={this.state.images}   
+          sliderBoxHeight={400}   
+          onCurrentImagePressed={
+            index => console.warn(`image ${index} pressed`)
+          }  
+          dotColor="#FFEE58"   
+          inactiveDotColor="#90A4AE"   
+          paginationBoxVerticalPadding={20}   
+          autoplay   
+          circleLoop >
+        </SliderBox>
+        <Text>HEllo</Text>
+      </View>
 
-      componentWillMount(){
-        this.setState({
-          interval: this.setInterval(() => {
-            this.setState({
-              position: this.state.position === this.state.dataSource.length? 0: this.state.position+1
-            });
-          }, interval)
-        });
-      }
-    
-      componentWillUnmount() {
-        clearInterval(this.state.interval);
-      }
-    
-      render() {
-        return (
-        <Slideshow
-            dataSource = {this.state.dataSource}
-            position = {this.state.position}
-            onPositionChanged = {position => this.setState({ position })}
-            />
-        );
-      }
+    );
+  }
+   
+}
+
+const Styles ={
+  container:{
+    flex: 2,
+    backgroundColor: '#2f3542'
+  }
 }
