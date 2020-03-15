@@ -15,9 +15,9 @@ export default class CardApp extends Component {
                     is more about component structure than actual design.
                 </Text>
                 <Button
-                    icon={<Icon name="rocket" size={30} color='yellow' />}
-                    buttonStyle={{borderRadius: 50, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                    title='VIEW NOW' />
+                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    buttonStyle={{borderRadius: 20, marginLeft: 0, marginRight: 200, marginBottom: 0}}
+                    title="Press here"/>
             </Card>
         )
     }

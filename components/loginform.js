@@ -16,13 +16,13 @@ export default class LoginForm extends Component {
                 <TextInput style = {Styles.inputText} placeholder="Email" 
                     onChangeText={text => this.setState({email: text})}>
                 </TextInput>
-                <TextInput style = {Styles.inputText} placeholder="Password" 
+                <TextInput secureTextEntry={true} style = {Styles.inputText} placeholder="Password" 
                     onChangeText={text => this.setState({password: text})}>
                 </TextInput>
                 <TouchableOpacity>
                     <Text style={Styles.forgot}>Forgot Password?</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={Styles.loginBtn}>
+                <TouchableOpacity style={Styles.loginBtn} disabled={!this.state.email || !this.state.password}>
                     <Text style={Styles.loginText}>LOGIN</Text>
                 </TouchableOpacity>
             </View>
