@@ -1,141 +1,107 @@
 import  React, { Component }  from 'react';
-import { SliderBox } from 'react-native-image-slider-box';
+import SlideShow from './slideshow';
 import { View, Image, ScrollView, Text, Button } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Home extends Component {
-  constructor(props) {     
-    super(props);     
-    this.state = {       
-    images: [         
-    require('../assests/audi.jpg'),        
-    require('../assests/benz.jpg'),
-    require('../assests/bmw1.png'),
-    require('../assests/vega.png'),
-    ],   
-    myloop: [] 
-    };
-}
   render() {
-    for (let i = 0; i < 3; i++) {
-      this.state.myloop.push(
-        <View style={Styles.overView} key={i}>
-          <View style={Styles.layOutView}>
-              <Image
-                style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
-              />
-              <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
-                <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
-                    title="Press here"/>
-              </View>
-          </View>
-          <View style={Styles.layOutView}>
-              <Image
-                style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
-              />
-              <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
-                <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
-                    title="Press here"/>
-              </View>
-          </View>
-        </View>
-      );
-    }
     return (
       <ScrollView contentContainerStyle={Styles.contentContainer}>
-        <SliderBox 
-          images={this.state.images}   
-          sliderBoxHeight={300}   
-          onCurrentImagePressed={
-            index => console.warn(`image ${index} pressed`)
-          }  
-          dotColor="#FFEE58"   
-          inactiveDotColor="#90A4AE"   
-          paginationBoxVerticalPadding={20}   
-          autoplay   
-          circleLoop >
-        </SliderBox>
-
-        {this.state.myloop}
-
-        {/* <View style={Styles.overView}>
-          <View style={Styles.layOutView}>
-              <Image
-                style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
-              />
-              <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
-                <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
-                    title="Press here"/>
-              </View>
-          </View>
-          <View style={Styles.layOutView}>
-              <Image
-                style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
-              />
-              <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
-                <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
-                    title="Press here"/>
-              </View>
-          </View>
-        </View>
-
+         <SlideShow/>
         <View style={Styles.overView}>
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
+                source={require('../assests/car.png')}
               />
               <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
+                <Text style={Styles.titleView}>{'Cars'}</Text>
+                <Text style={Styles.subtitleView}>{'sport cars'}</Text>
                 <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    // icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
                     title="Press here"/>
               </View>
           </View>
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
+                source={require('../assests/jeep.png')}
               />
               <View style={Styles.textView}>
-                <Text style={Styles.titleView}>{'Title'}</Text>
-                <Text style={Styles.subtitleView}>{'Subtitle'}</Text>
+                <Text style={Styles.titleView}>{'Jeep'}</Text>
+                <Text style={Styles.subtitleView}>{'Jeeps'}</Text>
                 <Button
-                    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    // icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
                     title="Press here"/>
               </View>
           </View>
-        </View> */}
-      </ScrollView>
-
+        </View>
+        <View style={Styles.overView}>
+          <View style={Styles.layOutView}>
+              <Image
+                style={Styles.imageView}
+                source={require('../assests/crossover.png')}
+              />
+              <View style={Styles.textView}>
+                <Text style={Styles.titleView}>{'Crossover'}</Text>
+                <Text style={Styles.subtitleView}>{'Outlander'}</Text>
+                <Button
+                  //  icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    title="Press here"/>
+              </View>
+          </View>
+          <View style={Styles.layOutView}>
+              <Image
+                style={Styles.imageView}
+                source={require('../assests/minicooper.png')}
+              />
+              <View style={Styles.textView}>
+                <Text style={Styles.titleView}>{'Mini Cooper'}</Text>
+                <Text style={Styles.subtitleView}>{'mini coopers'}</Text>
+                <Button
+                //    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    title="Press here"/>
+              </View>
+          </View>
+        </View>
+        <View style={Styles.overView} >
+          <View style={Styles.layOutView}>
+              <Image
+                style={Styles.imageView}
+                source={require('../assests/wagonR.png')}
+              />
+              <View style={Styles.textView}>
+                <Text style={Styles.titleView}>{'MINI Vans'}</Text>
+                <Text style={Styles.subtitleView}>{'vagonR '}</Text>
+                <Button
+                 //   icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    title="Press here"/>
+              </View>
+          </View>
+          <View style={Styles.layOutView}>
+              <Image
+                style={Styles.imageView}
+                source={require('../assests/pickup.png')}
+              />
+              <View style={Styles.textView}>
+                <Text style={Styles.titleView}>{'Pick up'}</Text>
+                <Text style={Styles.subtitleView}>{'Trucks'}</Text>
+                <Button
+                 //   icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    title="Press here"/>
+              </View>
+          </View>
+        </View>
+        </ScrollView>
     );
-  }
-   
+  } 
 }
 
 const Styles ={
   contentContainer:{
-    paddingVertical: 20,
     backgroundColor: '#2f3542'
   },
   overView:{
+    paddingTop:5,
     flex: 1,
     flexDirection: 'row'
   },
@@ -144,7 +110,7 @@ const Styles ={
     width: 200, 
     height: 200, 
     flexDirection:'row', 
-    margin:5
+    margin:3
   },
   imageView:{
     width: 200, 
