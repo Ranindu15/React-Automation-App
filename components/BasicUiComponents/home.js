@@ -11,26 +11,27 @@ export default class Home extends Component {
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/car.png')}
+                source={require('../../assests/car.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'Cars'}</Text>
                 <Text style={Styles.subtitleView}>{'sport cars'}</Text>
-                <Button
-                    // icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
-                    title="Press here"/>
+                <Button 
+                  onPress={() => {this.props.navigation.navigate('Carpage')}}  
+                  title="Press here"
+                />
               </View>
           </View>
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/jeep.png')}
+                source={require('../../assests/jeep.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'Jeep'}</Text>
                 <Text style={Styles.subtitleView}>{'Jeeps'}</Text>
                 <Button
-                    // icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    onPress={() => {this.props.navigation.navigate('Jeeppage')}}
                     title="Press here"/>
               </View>
           </View>
@@ -39,26 +40,26 @@ export default class Home extends Component {
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/crossover.png')}
+                source={require('../../assests/crossover.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'Crossover'}</Text>
                 <Text style={Styles.subtitleView}>{'Outlander'}</Text>
                 <Button
-                  //  icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    onPress={() => {this.props.navigation.navigate('Crossoverpage')}}
                     title="Press here"/>
               </View>
           </View>
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/minicooper.png')}
+                source={require('../../assests/minicooper.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'Mini Cooper'}</Text>
                 <Text style={Styles.subtitleView}>{'mini coopers'}</Text>
                 <Button
-                //    icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    onPress={() => {this.props.navigation.navigate('Minicooperpage')}}
                     title="Press here"/>
               </View>
           </View>
@@ -67,26 +68,26 @@ export default class Home extends Component {
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/wagonR.png')}
+                source={require('../../assests/wagonR.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'MINI Vans'}</Text>
                 <Text style={Styles.subtitleView}>{'vagonR '}</Text>
                 <Button
-                 //   icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                   onPress={() => {this.props.navigation.navigate('Minivanspage')}}
                     title="Press here"/>
               </View>
           </View>
           <View style={Styles.layOutView}>
               <Image
                 style={Styles.imageView}
-                source={require('../assests/pickup.png')}
+                source={require('../../assests/pickup.png')}
               />
               <View style={Styles.textView}>
                 <Text style={Styles.titleView}>{'Pick up'}</Text>
                 <Text style={Styles.subtitleView}>{'Trucks'}</Text>
                 <Button
-                 //   icon={<Icon name='apple' type='font-awesome' size={20} color="yellow"/>}
+                    onPress={() => {this.props.navigation.navigate('Pickuppage')}}
                     title="Press here"/>
               </View>
           </View>

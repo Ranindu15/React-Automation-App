@@ -2,9 +2,26 @@ import React, {Component} from 'react';
 import { Image, Button, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import  Home  from '../components/home';
-import  LoginForm  from '../components/loginform';
-import Model from '../components/model';
+import  Home  from '../components/BasicUiComponents/home';
+import  LoginForm  from '../components/BasicUiComponents/loginform';
+import Cars from '../components/CategoryUiComponents/cars';
+import Jeep from '../components/CategoryUiComponents/jeep';
+import Crossover from '../components/CategoryUiComponents/crossover';
+import Minicooper from '../components/CategoryUiComponents/minicooper';
+import Minivans from '../components/CategoryUiComponents/minivans';
+import Pickup from '../components/CategoryUiComponents/pickup';
+import Audi from '../components/carmodelcomponents/Audi';
+import BMW from '../components/carmodelcomponents/BMW';
+import Hyundai from '../components/carmodelcomponents/Hyundai';
+import Jaguar from '../components/carmodelcomponents/Jaguar';
+import Kia from '../components/carmodelcomponents/Kia';
+import Mazda from '../components/carmodelcomponents/Mazda';
+import Benz from '../components/carmodelcomponents/Mercedes-Benz';
+import Mitsubishi from '../components/carmodelcomponents/Mitsubishi';
+import Nissan from '../components/carmodelcomponents/Nissan';
+import Toyota from '../components/carmodelcomponents/Toyota';
+import Volkswagen from '../components/carmodelcomponents/Volkswagen';
+
 
 const Homestack = createStackNavigator();
 
@@ -28,7 +45,23 @@ export default class RotingApp extends Component {
             title:"Transformers",
             headerTitleAlign:'center',
           }}/>
-          <Homestack.Screen name="modelpage" component={Model} />
+          <Homestack.Screen name="Carpage" component={Cars} options={{title:"Search your fav Car"}}/>
+          <Homestack.Screen name="Jeeppage" component={Jeep} />
+          <Homestack.Screen name="Crossoverpage" component={Crossover} />
+          <Homestack.Screen name="Minicooperpage" component={Minicooper} />
+          <Homestack.Screen name="Minivanspage" component={Minivans} />
+          <Homestack.Screen name="Pickuppage" component={Pickup} />
+          <Homestack.Screen name="Audi" component={Audi} />
+          <Homestack.Screen name="BMW" component={BMW} />
+          <Homestack.Screen name="Hyundai" component={Hyundai} />
+          <Homestack.Screen name="Jaguar" component={Jaguar} />
+          <Homestack.Screen name="Kia" component={Kia} />
+          <Homestack.Screen name="Mazda" component={Mazda} />
+          <Homestack.Screen name="Mercedes-Benz" component={Benz} />
+          <Homestack.Screen name="Mitsubishi" component={Mitsubishi} />
+          <Homestack.Screen name="Nissan" component={Nissan} />
+          <Homestack.Screen name="Toyota" component={Toyota} />
+          <Homestack.Screen name="Volkswagen" component={Volkswagen} />
         </Homestack.Navigator>
       </NavigationContainer>
   )
