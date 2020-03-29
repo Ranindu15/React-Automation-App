@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { SectionList, StyleSheet, Text, View } from 'react-native';
-import { color } from 'react-native-reanimated';
 
 export default class Cars extends Component {
   navigateToDetail = (item) => {

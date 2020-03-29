@@ -11,7 +11,7 @@ import Minicooper from '../components/CategoryUiComponents/minicooper';
 import Minivans from '../components/CategoryUiComponents/minivans';
 import Pickup from '../components/CategoryUiComponents/pickup';
 import Audi from '../components/carmodelcomponents/Audi';
-import BMW from '../components/carmodelcomponents/BMW';
+import BMW,{ BMW1, BMW2} from '../components/carmodelcomponents/BMW';
 import Hyundai from '../components/carmodelcomponents/Hyundai';
 import Jaguar from '../components/carmodelcomponents/Jaguar';
 import Kia from '../components/carmodelcomponents/Kia';
@@ -21,6 +21,7 @@ import Mitsubishi from '../components/carmodelcomponents/Mitsubishi';
 import Nissan from '../components/carmodelcomponents/Nissan';
 import Toyota from '../components/carmodelcomponents/Toyota';
 import Volkswagen from '../components/carmodelcomponents/Volkswagen';
+import {AudiA1, AudiA3, AudiA4} from '../components/carmodelcomponents/Audi';
 
 
 const Homestack = createStackNavigator();
@@ -62,6 +63,11 @@ export default class RotingApp extends Component {
           <Homestack.Screen name="Nissan" component={Nissan} />
           <Homestack.Screen name="Toyota" component={Toyota} />
           <Homestack.Screen name="Volkswagen" component={Volkswagen} />
+          <Homestack.Screen name="audia1" component={AudiA1} />
+          <Homestack.Screen name="audia3" component={AudiA3} />
+          <Homestack.Screen name="audia4" component={AudiA4} />
+          <Homestack.Screen name="bmw1" component={BMW1} />
+          <Homestack.Screen name="bmw2" component={BMW2} />
         </Homestack.Navigator>
       </NavigationContainer>
   )
